@@ -1,5 +1,6 @@
 package modulo.matriculacion;
 
+import modulo.calificaciones.Estudiante;
 import modulo.calificaciones.Materia;
 
 import java.util.ArrayList;
@@ -17,9 +18,12 @@ public class CurriculumAcademico {
         return true;
     }
 
-    public ArrayList<Materia> obtenerMateriasReprobadas(){
+    public ArrayList<Materia> obtenerMateriasReprobadas(Estudiante estudiante){
         ArrayList<Materia> materiasReprobadas = new ArrayList<>();
+
         return materiasReprobadas;
     }
-
+    public ArrayList<Materia> getMateriasIncritas(){
+        return materiasIncritas;
+    }
 }
