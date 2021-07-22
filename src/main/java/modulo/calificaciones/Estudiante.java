@@ -25,6 +25,10 @@ public class Estudiante {
         this.reporte=reporte;
     }
 
+    public CurriculumAcademico getCurriculum() {
+        return curriculum;
+    }
+
     public void setCarrera(Carrera carrera) {
         this.carrera = carrera;
     }

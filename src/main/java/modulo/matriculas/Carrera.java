@@ -28,7 +28,11 @@ public class Carrera {
     }
 
     public ArrayList<Materia> obtenerMateriasSinAprobar(Estudiante estudiante){
-        ArrayList<Materia> materiasSinAprobar = new ArrayList<>();
+        ArrayList<Materia> materiasSinAprobar = materias;
+        for(Materia a: estudiante.getCurriculum().getMateriasIncritas()){
+            if(a.isEstadoAprobacion())
+                materiasSinAprobar.remove(a);
+        }
         return materiasSinAprobar;
     }
 }

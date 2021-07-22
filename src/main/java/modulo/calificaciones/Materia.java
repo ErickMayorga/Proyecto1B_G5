@@ -22,6 +22,10 @@ public class Materia {
         return costoMateriaPorHora;
     }
 
+    public boolean isEstadoAprobacion() {
+        return estadoAprobacion;
+    }
+
     public boolean isSegundaMatricula() {
         return segundaMatricula;
     }
