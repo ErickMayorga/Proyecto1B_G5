@@ -3,9 +3,16 @@ package modulo.matriculacion;
 import modulo.calificaciones.Estudiante;
 import modulo.calificaciones.Materia;
 
+import java.util.ArrayList;
+
 public class VisualizadorMatriculas {
-    Estudiante estudiante;
-    public void mostrarMateriasDisponibles(){
+    ArrayList<Materia> materiasDisponibles = new ArrayList<>();
+
+    public ArrayList<Materia> getMateriasDisponibles() {
+        return materiasDisponibles;
+    }
+
+    public void mostrarMateriasDisponibles(Estudiante estudiante){
 
     }
 

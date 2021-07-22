@@ -1,5 +1,7 @@
 package modulo.calificaciones;
 
+import modulo.matriculacion.Horario;
+
 import java.util.ArrayList;
 
 public class Curso {
@@ -8,11 +10,16 @@ public class Curso {
     private Profesor profesor;
     private ArrayList<Estudiante> estudiantes;
     private String horario;
+    private ArrayList<Horario> horarios = new ArrayList<>();
 
     public Curso(Materia materia, String paralelo){
         this.materia = materia;
         this.paralelo = paralelo;
         estudiantes = new ArrayList<>();
+    }
+
+    public void addHorario(Horario horario){
+        horarios.add(horario);
     }
 
     public String getParalelo() {

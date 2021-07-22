@@ -1,5 +1,6 @@
 package modulo.calificaciones;
 
+import modulo.matriculacion.VisualizadorMatriculas;
 import modulo.matriculas.Carrera;
 import modulo.matriculacion.CurriculumAcademico;
 import modulo.matriculas.Pago;
@@ -11,6 +12,7 @@ public class Estudiante {
     private Pago pago = null;
     private Carrera carrera;
     private CurriculumAcademico curriculum;
+    public VisualizadorMatriculas visualizador;
 /*EsTUDIANTE es becado ?*/
     private boolean beca=false;
 
