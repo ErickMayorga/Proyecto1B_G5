@@ -4,6 +4,7 @@ public class Materia {
     private String nombre;
     private int numHoras;
     private boolean segundaMatricula;
+    private boolean estadoAprobacion;
     /*Este costo materia por ahora no se si debe estar aqui o debe ser dado por tesoreria el costo
     * de horas ?*/
     double costoMateriaPorHora;

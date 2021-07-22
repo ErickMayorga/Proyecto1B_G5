@@ -1,5 +1,7 @@
 package modulo.calificaciones;
 
+import modulo.matriculas.Carrera;
+import modulo.matriculacion.CurriculumAcademico;
 import modulo.matriculas.Pago;
 
 public class Estudiante {
@@ -7,6 +9,8 @@ public class Estudiante {
     private String apellido;
     private ReporteCalificaciones reporte;
     private Pago pago = null;
+    private Carrera carrera;
+    private CurriculumAcademico curriculum;
 /*EsTUDIANTE es becado ?*/
     private boolean beca=false;
 
@@ -19,6 +23,10 @@ public class Estudiante {
         this.nombre=nombre;
         this.apellido=apellido;
         this.reporte=reporte;
+    }
+
+    public void setCarrera(Carrera carrera) {
+        this.carrera = carrera;
     }
 
     public String getNombre() {
