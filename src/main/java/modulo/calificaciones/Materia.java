@@ -10,6 +10,12 @@ public class Materia {
     double costoMateriaPorHora;
     public Materia(String nombre) {
         this.nombre = nombre;
+        /*Por defecto el estado de la materia esta en false sin embargo esto se puede modificar*/
+        this.estadoAprobacion=false;
+    }
+    public Materia(String nombre,boolean estadoAprobacion) {
+        this.nombre = nombre;
+        this.estadoAprobacion=estadoAprobacion;
     }
 
     public String getNombre() {

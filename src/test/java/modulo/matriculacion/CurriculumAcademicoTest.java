@@ -18,17 +18,14 @@ public class CurriculumAcademicoTest {
     public void given_estudiante_when_obtenerMateriasReprobadas_then_ok() {
         Estudiante estudiante = new Estudiante("Luis", "Pedri");
         CurriculumAcademico curriculumAcademico1 = new CurriculumAcademico();
-        curriculumAcademico1.obtenerMateriasReprobadas(estudiante).add(new Materia("Politica Social"));
-        curriculumAcademico1.obtenerMateriasReprobadas(estudiante).add(new Materia("Fund.Programacion"));
-        curriculumAcademico1.obtenerMateriasReprobadas(estudiante).add(new Materia("Sftware Mangement"));
-        curriculumAcademico1.obtenerMateriasReprobadas(estudiante).add(new Materia("Metodologias Agiles"));
-        curriculumAcademico1.obtenerMateriasReprobadas(estudiante).get(0).setEstadoAprobacion(true);
-        curriculumAcademico1.obtenerMateriasReprobadas(estudiante).get(1).setEstadoAprobacion(true);
-        curriculumAcademico1.obtenerMateriasReprobadas(estudiante).get(2).setEstadoAprobacion(true);
-        curriculumAcademico1.obtenerMateriasReprobadas(estudiante).get(3).setEstadoAprobacion(true);
+        curriculumAcademico1.getMateriasIncritas().add(new Materia("Politica Social"));
+        curriculumAcademico1.getMateriasIncritas().add(new Materia("Fund.Programacion",true));
+        curriculumAcademico1.getMateriasIncritas().add(new Materia("Sftware Mangement"),true);
+        curriculumAcademico1.getMateriasIncritas().add(new Materia("Metodologias Agiles"));
         int i = 0;
+        /*comprueba que todas las materias obtenidas por el metodo tengan estado de aprobacion false*/
         while (i < curriculumAcademico1.obtenerMateriasReprobadas(estudiante).size() - 1) {
-            assertTrue(curriculumAcademico1.obtenerMateriasReprobadas(estudiante).get(i).getEstadoAprobacion());
+            assertFalse(curriculumAcademico1.obtenerMateriasReprobadas(estudiante).get(i).getEstadoAprobacion());
             i++;
         }
 

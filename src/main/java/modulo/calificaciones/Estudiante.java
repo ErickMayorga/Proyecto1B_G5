@@ -71,7 +71,9 @@ public class Estudiante {
     public boolean getBeca(){
         return beca;
     }
-
+    public Carrera getCarrera(){
+        return this.carrera;
+    }
     public void setBeca(boolean beca) {
         this.beca = beca;
     }
