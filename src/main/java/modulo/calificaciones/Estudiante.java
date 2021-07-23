@@ -31,6 +31,10 @@ public class Estudiante {
         return curriculum;
     }
 
+    public void setCurriculum(CurriculumAcademico curriculum) {
+        this.curriculum = curriculum;
+    }
+
     public void setCarrera(Carrera carrera) {
         this.carrera = carrera;
     }
