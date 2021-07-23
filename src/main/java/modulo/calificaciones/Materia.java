@@ -21,7 +21,12 @@ public class Materia {
     public double getCostoMateriaPorHora(){
         return costoMateriaPorHora;
     }
-
+    public boolean getSegundaMatricula(){
+        return this.segundaMatricula;
+    }
+    public boolean getEstadoAprobacion(){
+        return this.estadoAprobacion;
+    }
     public boolean isEstadoAprobacion() {
         return estadoAprobacion;
     }
@@ -32,5 +37,9 @@ public class Materia {
 
     public void setSegundaMatricula(boolean segundaMatricula) {
         this.segundaMatricula = segundaMatricula;
+    }
+
+    public void setEstadoAprobacion(boolean estadoAprobacion) {
+        this.estadoAprobacion = estadoAprobacion;
     }
 }

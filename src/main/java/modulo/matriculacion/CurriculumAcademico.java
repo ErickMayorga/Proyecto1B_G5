@@ -28,7 +28,7 @@ public class CurriculumAcademico {
     public ArrayList<Materia> obtenerMateriasReprobadas(Estudiante estudiante){
         ArrayList<Materia> materiasReprobadas = new ArrayList<>();
 
-        return materiasReprobadas;
+        return this.materiasIncritas;
     }
     public ArrayList<Materia> getMateriasIncritas(){
         return materiasIncritas;
