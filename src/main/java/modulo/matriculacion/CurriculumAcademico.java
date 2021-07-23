@@ -26,11 +26,11 @@ public class CurriculumAcademico {
     }
 
     public ArrayList<Materia> obtenerMateriasReprobadas(Estudiante estudiante){
-        ArrayList<Materia> materiasReprobadas = new ArrayList<>();
+        ArrayList<Materia> materiasReprobadas = new ArrayList<Materia>();
         for (Materia materia:
-             estudiante.) {
-            if(){
-
+             estudiante.getCarrera().getMaterias()) {
+            if(materia.isSegundaMatricula()){
+                materiasReprobadas.add(materia);
             }
         }
         return materiasReprobadas;

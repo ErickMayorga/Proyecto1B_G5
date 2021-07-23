@@ -13,9 +13,9 @@ public class Materia {
         /*Por defecto el estado de la materia esta en false sin embargo esto se puede modificar*/
         this.estadoAprobacion=false;
     }
-    public Materia(String nombre,boolean estadoAprobacion) {
+    public Materia(String nombre,boolean segundaMatricula) {
         this.nombre = nombre;
-        this.estadoAprobacion=estadoAprobacion;
+        this.segundaMatricula=segundaMatricula;
     }
 
     public String getNombre() {
