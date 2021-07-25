@@ -23,4 +23,11 @@ public class Horario {
         }
         return true;
     }
+    public int getDiaSemana(){
+        return diaSemana;
+    }
+
+    public ArrayList<Integer> getHorasClase() {
+        return horasClase;
+    }
 }

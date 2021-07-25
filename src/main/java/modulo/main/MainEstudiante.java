@@ -32,19 +32,23 @@ public class MainEstudiante {
         Curso c1 = new Curso(m1,"A");
         c1.addHorario(new Horario(0,new ArrayList<Integer>(Arrays.asList(0, 1))));
         c1.addHorario(new Horario(4,new ArrayList<Integer>(Arrays.asList(4, 5)))); // Horario que choca 1
+        m1.setCurso(c1);
         Curso c2 = new Curso(m1,"B");
         c2.addHorario(new Horario(1,new ArrayList<Integer>(Arrays.asList(0, 1))));
         c2.addHorario(new Horario(4,new ArrayList<Integer>(Arrays.asList(3, 4)))); // Horario que choca 2
+        m1.setCurso(c2);
         Curso c3 = new Curso(m2,"A");
         c3.addHorario(new Horario(2,new ArrayList<Integer>(Arrays.asList(10, 11))));
         c3.addHorario(new Horario(5,new ArrayList<Integer>(Arrays.asList(6, 7))));
+        m2.setCurso(c3);
         Curso c4 = new Curso(m2,"B");
         c4.addHorario(new Horario(3,new ArrayList<Integer>(Arrays.asList(0, 1))));
         c4.addHorario(new Horario(0,new ArrayList<Integer>(Arrays.asList(2, 3, 4))));
+        m2.setCurso(c4);
         Curso c5 = new Curso(m3,"A");
         c5.addHorario(new Horario(2,new ArrayList<Integer>(Arrays.asList(3, 4, 5))));
         c5.addHorario(new Horario(4,new ArrayList<Integer>(Arrays.asList(6, 7))));
-
+        m3.setCurso(c5);
         //Caso de prueba
         Estudiante estudiante = new Estudiante("Jaime","Guevara");
         estudiante.visualizador = new VisualizadorMatriculas();

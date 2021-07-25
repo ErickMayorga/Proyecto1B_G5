@@ -41,7 +41,9 @@ public class Curso {
     public ArrayList<Estudiante> obtenerListaEstudiantes(){
         return estudiantes;
     }
-
+    public ArrayList<Horario> getHorarios(){
+        return this.horarios;
+    }
     void asignarCalificaciónEstudiante(Estudiante estudiante, int opcion, Calificacion calificacion) {
         for (Estudiante e : obtenerListaEstudiantes()) {
             if (e.equals(estudiante)) {

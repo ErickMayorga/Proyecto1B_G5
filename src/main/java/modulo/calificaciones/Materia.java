@@ -1,10 +1,13 @@
 package modulo.calificaciones;
 
+import java.util.ArrayList;
+
 public class Materia {
     private String nombre;
     private int numHoras;
     private boolean segundaMatricula;
     private boolean estadoAprobacion;
+    ArrayList<Curso> curso = new ArrayList<Curso>();
     /*Este costo materia por ahora no se si debe estar aqui o debe ser dado por tesoreria el costo
     * de horas ?*/
     double costoMateriaPorHora;
@@ -47,5 +50,11 @@ public class Materia {
 
     public void setEstadoAprobacion(boolean estadoAprobacion) {
         this.estadoAprobacion = estadoAprobacion;
+    }
+    public void setCurso( Curso curso){
+        this.curso.add(curso);
+    }
+    public ArrayList<Curso> getCurso(){
+        return curso;
     }
 }
