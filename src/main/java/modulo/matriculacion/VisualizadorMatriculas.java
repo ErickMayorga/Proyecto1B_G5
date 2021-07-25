@@ -8,13 +8,12 @@ import java.util.ArrayList;
 
 public class VisualizadorMatriculas {
     ArrayList<Materia> materiasDisponibles = new ArrayList<Materia>();
-    ArrayList<Curso> horariosDeMateria = new ArrayList<Curso>();
+    ArrayList<Curso> horariosDeMateria ;
     public ArrayList<Materia> getMateriasDisponibles() {
         return materiasDisponibles;
     }
     public ArrayList<Curso> getHorariosDeMateria(){return horariosDeMateria;}
     public void mostrarMateriasDisponibles(Estudiante estudiante){
-
         System.out.printf("%-20s","Materias");
         System.out.println();
         int indice=1;
@@ -36,7 +35,7 @@ public class VisualizadorMatriculas {
     }
 
     public void mostrarHorariosDeMateria(Materia materia){
-
+        this.horariosDeMateria=new ArrayList<Curso>();
         int indice=1;
 
         for (Curso curso: materia.getCurso()) {
