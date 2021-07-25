@@ -81,7 +81,7 @@ public class MainProfesor {
             p1.listarCursosAsignados();
             System.out.print("Seleccione el número de curso que desea: ");
             opCurso = entrada.nextInt();
-            entrada.skip("\n");
+            //entrada.skip("\n");
 
             canCursos = p1.visualizador.getGestorCursos().obtenerCursosAsignados(p1).size();
             if(opCurso>canCursos+1 || opCurso<=0){
@@ -94,7 +94,7 @@ public class MainProfesor {
                 p1.listarEstudiantes(cursoAux);
                 System.out.print("Seleccione un estudiante: ");
                 opEstudiante = entrada.nextInt();
-                entrada.skip("\n");
+                //entrada.skip("\n");
                 canEstudiantes = cursoAux.obtenerListaEstudiantes().size();
                 if(opEstudiante>canEstudiantes+1 || opEstudiante<=0){
                     System.out.println("La opcion ingresada es incorrecta");
@@ -109,7 +109,7 @@ public class MainProfesor {
                     System.out.println("4. Salir");
                     System.out.print("Seleccione una calificacion: ");
                     opCalificacion = entrada.nextInt();
-                    entrada.skip("\n");
+                    //entrada.skip("\n");
                     if(opCalificacion>4 || opCalificacion<=0){
                         System.out.println("La opcion ingresada es incorrecta");
                     }else{
@@ -118,7 +118,7 @@ public class MainProfesor {
                             System.out.print("Ingrese el valor de la calificacion: ");
                             calificacion = entrada.nextDouble();
                             cal.setValorNota(calificacion);
-                            entrada.skip("\n");
+                            //entrada.skip("\n");
                             if(!cal.validarCalificacion(calificacion)){
                                 System.out.println("¡¡La nota ingresada no es válida!!\n");
                             }
