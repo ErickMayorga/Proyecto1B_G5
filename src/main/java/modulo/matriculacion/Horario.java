@@ -12,6 +12,15 @@ public class Horario {
     }
 
     public boolean validarHorario(){
+        if(diaSemana>5||diaSemana<0){
+            return false;
+        }
+        for (int horaDelDia:
+             horasClase) {
+            if (horaDelDia<0||horaDelDia>11){
+                return false;
+            }
+        }
         return true;
     }
 }
