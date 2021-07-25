@@ -8,11 +8,11 @@ import java.util.ArrayList;
 
 public class VisualizadorMatriculas {
     ArrayList<Materia> materiasDisponibles = new ArrayList<Materia>();
-    ArrayList<Horario> horariosDeMateria = new ArrayList<Horario>();
+    ArrayList<Curso> horariosDeMateria = new ArrayList<Curso>();
     public ArrayList<Materia> getMateriasDisponibles() {
         return materiasDisponibles;
     }
-
+    public ArrayList<Curso> getHorariosDeMateria(){return horariosDeMateria;}
     public void mostrarMateriasDisponibles(Estudiante estudiante){
 
         System.out.printf("%-20s","Materias");
@@ -46,9 +46,10 @@ public class VisualizadorMatriculas {
                 System.out.printf("%-15s",transformarNumeroADiaDeSemana(horario.getDiaSemana()));
                 System.out.printf("%-5s",this.tranformarNumeroAHorario(horario.getHorasClase()));
                 System.out.println("");
-                horariosDeMateria.add(horario);
+
 
             }
+            horariosDeMateria.add(curso);
             indice++;
         }
 

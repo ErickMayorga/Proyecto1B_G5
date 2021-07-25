@@ -13,6 +13,39 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class MainEstudiante {
+    public static boolean estaOcupadoHorario(Curso curso,int[][] semana){
+        for (Horario horario:curso.getHorarios()){
+            for(int horaDia:horario.getHorasClase()){
+                if(semana[horaDia][horario.getDiaSemana()]!=0){
+                    return true;
+                }
+
+            }
+        }
+        return false;
+    }
+    public static int[] puestoOcupadoHorario(Curso curso,int[][] semana){
+        int puestoOcupado[]= {0,0};
+        for (Horario horario:curso.getHorarios()){
+            for(int horaDia:horario.getHorasClase()){
+                if(semana[horaDia][horario.getDiaSemana()]!=0){
+                    puestoOcupado[0]=horario.getDiaSemana();
+                    puestoOcupado[1]=horaDia;
+                }
+
+            }
+        }
+        return puestoOcupado;
+    }
+    public static void registrarMateria(Curso curso,int[][] semana,int materiaSelec){
+        int puestoOcupado[]= {0,0};
+        for (Horario horario:curso.getHorarios()){
+            for(int horaDia:horario.getHorasClase()){
+                semana[horaDia][horario.getDiaSemana()]=materiaSelec;
+
+            }
+        }
+    }
     public static void main(String[] args) {
 
         //Carrera
@@ -67,7 +100,11 @@ public class MainEstudiante {
 
         ArrayList<Curso> cursosInscritos = new ArrayList<Curso>();
         int[][] matrizHorarios = new int[12][6];
-
+        for(int i=0;i<12;i++){
+            for(int j=0;j<5;j++){
+                matrizHorarios[i][j]=0;
+            }
+        }
         System.out.println("Estudiante: " + estudiante.getNombre() + " " + estudiante.getApellido());
         System.out.println("SERVICIOS ESTUDIANTILES");
         System.out.println("1. Visualización de notas");
@@ -88,6 +125,18 @@ public class MainEstudiante {
                 estudiante.visualizador.mostrarHorariosDeMateria(materiaAux);
                 System.out.print("Seleccione un curso: ");
                 opCurso = entrada.nextInt();
+                estudiante.visualizador.getHorariosDeMateria().get(opCurso-1);
+                while(estaOcupadoHorario(estudiante.visualizador.getHorariosDeMateria().get(opCurso-1),matrizHorarios)){
+                    int numeroDelDiaOcupado=puestoOcupadoHorario(estudiante.visualizador.getHorariosDeMateria().get(opCurso-1),matrizHorarios)[0];
+                    int horaDelDiaOcupado=puestoOcupadoHorario(estudiante.visualizador.getHorariosDeMateria().get(opCurso-1),matrizHorarios)[1];
+                    System.out.println("Cruce de Horarios con "+
+                            estudiante.visualizador.getMateriasDisponibles().get(matrizHorarios[horaDelDiaOcupado][numeroDelDiaOcupado]));
+                    estudiante.visualizador.mostrarHorariosDeMateria(materiaAux);
+                    System.out.print("Seleccione un curso: ");
+                    opCurso = entrada.nextInt();
+                }
+                registrarMateria(estudiante.visualizador.getHorariosDeMateria().get(opCurso-1),matrizHorarios,opMateria);
+                System.out.println("Materia Registrada Satisfactoriamente.");
                 entrada.skip("\n");
 
                 break;
