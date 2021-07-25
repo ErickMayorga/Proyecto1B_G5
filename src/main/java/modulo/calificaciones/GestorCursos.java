@@ -19,6 +19,7 @@ public class GestorCursos {
             System.out.println(indice + ". " + a.getMateria().getNombre() + "\t \"" + a.getParalelo() + "\"");
             indice++;
         }
+        System.out.println(indice + ". Salir");
     }
 
     int listarEstudiantesDeCurso(Curso curso, int indice, VisualizadorReportes visualizadorReportes) {

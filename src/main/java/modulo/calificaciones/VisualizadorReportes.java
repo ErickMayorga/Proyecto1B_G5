@@ -16,7 +16,7 @@ public class VisualizadorReportes {
         System.out.println("Materia \t\t Paralelo");
         System.out.println("-------------------------------------------------");
         this.gestorCursos.listarCursosAsignados(indice, profesor);
-        System.out.println(indice + ". Salir");
+
     }
 
     public void mostrarListaEstudiantesDeCurso(Curso curso){
