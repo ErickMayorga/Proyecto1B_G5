@@ -13,6 +13,7 @@ public class Carrera {
 
     public Carrera(String nombre) {
         this.nombre = nombre;
+        materias = new ArrayList<Materia>();
     }
 
     public Carrera(ArrayList<Materia> materias) {
