@@ -153,7 +153,7 @@ public class MainEstudiante {
                             if(opCurso!=-1) {
                                 registrarMateria(estudiante.visualizador.getHorariosDeMateria().get(opCurso - 1), matrizHorarios, opMateria);
                                 System.out.println("Materia Registrada Satisfactoriamente.");
-                                imprimirMatriz(matrizHorarios);
+                                //imprimirMatriz(matrizHorarios);
                                 entrada.skip("\n");
                             }
                         }else {
