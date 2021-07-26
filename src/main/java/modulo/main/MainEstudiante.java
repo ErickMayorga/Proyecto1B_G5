@@ -123,7 +123,7 @@ public class MainEstudiante {
             System.out.println("2. Matriculación");
             System.out.print("Seleccione un servicio: ");
             opServicio = entrada.nextInt();
-            entrada.skip("\n");
+            //entrada.skip("\n");
             switch (opServicio) {
                 case 1:
                     break;
@@ -133,7 +133,7 @@ public class MainEstudiante {
                         estudiante.visualizador.mostrarMateriasDisponibles(estudiante);
                         System.out.print("Seleccione una materia: (Presione -1 para salir.)");
                         opMateria = entrada.nextInt();
-                        entrada.skip("\n");
+                        //entrada.skip("\n");
                         if (opMateria != -1) {
                             materiaAux = estudiante.visualizador.getMateriasDisponibles().get(opMateria - 1);
                             estudiante.visualizador.mostrarHorariosDeMateria(materiaAux);
@@ -154,7 +154,7 @@ public class MainEstudiante {
                                 registrarMateria(estudiante.visualizador.getHorariosDeMateria().get(opCurso - 1), matrizHorarios, opMateria);
                                 System.out.println("Materia Registrada Satisfactoriamente.");
                                 //imprimirMatriz(matrizHorarios);
-                                entrada.skip("\n");
+                                //entrada.skip("\n");
                             }
                         }else {
                             System.out.println("Matricula Finalizada");
