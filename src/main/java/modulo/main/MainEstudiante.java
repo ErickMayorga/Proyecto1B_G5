@@ -149,6 +149,9 @@ public class MainEstudiante {
                                 estudiante.visualizador.mostrarHorariosDeMateria(materiaAux);
                                 System.out.print("Seleccione un curso:(Presione -1 para salir.) ");
                                 opCurso = entrada.nextInt();
+                                if(opCurso==-1){
+                                    break;
+                                }
                             }
                             if(opCurso!=-1) {
                                 registrarMateria(estudiante.visualizador.getHorariosDeMateria().get(opCurso - 1), matrizHorarios, opMateria);
