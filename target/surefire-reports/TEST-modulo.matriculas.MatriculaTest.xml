@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="modulo.matriculas.MatriculaTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="modulo.matriculas.MatriculaTest" time="0.012" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.1.2"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -64,7 +64,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="modulo.matriculas.MatriculaTest" name="given_matricula_when_beca_is_not_null" time="0"/>
-  <testcase classname="modulo.matriculas.MatriculaTest" name="given_matricula_when_beca_is_null" time="0"/>
-  <testcase classname="modulo.matriculas.MatriculaTest" name="given_materiasRepetidas_when_array_is_ok" time="0.002"/>
+  <testcase classname="modulo.matriculas.MatriculaTest" name="given_matricula_when_beca_is_not_null" time="0.007"/>
+  <testcase classname="modulo.matriculas.MatriculaTest" name="given_matricula_when_beca_is_null" time="0.002"/>
+  <testcase classname="modulo.matriculas.MatriculaTest" name="given_materiasRepetidas_when_array_is_ok" time="0.003"/>
 </testsuite>

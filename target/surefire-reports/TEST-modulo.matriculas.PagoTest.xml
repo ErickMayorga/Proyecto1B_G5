@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="modulo.matriculas.PagoTest" time="0" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="modulo.matriculas.PagoTest" time="0.001" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.1.2"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -66,5 +66,5 @@
   </properties>
   <testcase classname="modulo.matriculas.PagoTest" name="given_arancel_and_matricula_when_calcularPago_is_ok[0]" time="0"/>
   <testcase classname="modulo.matriculas.PagoTest" name="given_arancel_and_matricula_when_calcularPago_is_ok[1]" time="0"/>
-  <testcase classname="modulo.matriculas.PagoTest" name="given_arancel_and_matricula_when_calcularPago_is_ok[2]" time="0"/>
+  <testcase classname="modulo.matriculas.PagoTest" name="given_arancel_and_matricula_when_calcularPago_is_ok[2]" time="0.001"/>
 </testsuite>
