@@ -116,6 +116,7 @@ public class MainEstudiante {
             }
         }
         int exitoPrograma=0;
+        System.out.println("Esta es una linea ingresada por el Grupo 5");
         do {
             System.out.println("Estudiante: " + estudiante.getNombre() + " " + estudiante.getApellido());
             System.out.println("SERVICIOS ESTUDIANTILES");
