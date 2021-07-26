@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="modulo.calificaciones.EstudianteTest" time="0.857" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="modulo.calificaciones.EstudianteTest" time="0.49" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.1.2"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -64,6 +64,6 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="modulo.calificaciones.EstudianteTest" name="give_pago_when_is_correct_then_ok" time="0.857"/>
+  <testcase classname="modulo.calificaciones.EstudianteTest" name="give_pago_when_is_correct_then_ok" time="0.49"/>
   <testcase classname="modulo.calificaciones.EstudianteTest" name="give_pago_when_is_correct_then_error" time="0"/>
 </testsuite>
