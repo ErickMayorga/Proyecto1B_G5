@@ -11,7 +11,7 @@ public class HorarioTest {
     Horario horario=null;
     ArrayList<Integer> horasDia;
     @Before
-    void setup(){
+    public void setup(){
         horasDia= new ArrayList<Integer>();
         horasDia.add(0);
         horasDia.add(1);
