@@ -17,8 +17,9 @@ public class CurriculumAcademico {
         this.plataforma = plataforma;
     }
 
-    public boolean registrarSuficienciaIngles(){
-        return true;
+    public boolean registrarSuficienciaIngles(Estudiante estudiante){
+
+        return plataforma.verificarSuficienciaIngles(estudiante);
     }
 
     public void cambiarEstadoMateriaReprobada(Materia materia){
