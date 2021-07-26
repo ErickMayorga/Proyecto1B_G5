@@ -121,9 +121,11 @@ public class MainEstudiante {
             System.out.println("SERVICIOS ESTUDIANTILES");
             System.out.println("1. Visualización de notas");
             System.out.println("2. Matriculación");
-            System.out.print("Seleccione un servicio: ");
-            opServicio = entrada.nextInt();
+
+            //System.out.print("Seleccione un servicio: ");
+            //opServicio = entrada.nextInt();
             //entrada.skip("\n");
+            opServicio = 2;
             switch (opServicio) {
                 case 1:
                     break;
@@ -131,14 +133,18 @@ public class MainEstudiante {
                     int exitoDeMatricula = 0;
                     do {
                         estudiante.visualizador.mostrarMateriasDisponibles(estudiante);
-                        System.out.print("Seleccione una materia: (Presione -1 para salir.)");
-                        opMateria = entrada.nextInt();
+
+                        //System.out.print("Seleccione una materia: (Presione -1 para salir.)");
+                        //opMateria = entrada.nextInt();
+                        opMateria = 1;
                         //entrada.skip("\n");
                         if (opMateria != -1) {
                             materiaAux = estudiante.visualizador.getMateriasDisponibles().get(opMateria - 1);
                             estudiante.visualizador.mostrarHorariosDeMateria(materiaAux);
-                            System.out.print("Seleccione un curso: ");
-                            opCurso = entrada.nextInt();
+
+                            //System.out.print("Seleccione un curso: ");
+                            //opCurso = entrada.nextInt();
+                            opCurso = 1;
                             estudiante.visualizador.getHorariosDeMateria().get(opCurso - 1);
                             System.out.println("Opcurso -1:"+opCurso);
                             while (estaOcupadoHorario(estudiante.visualizador.getHorariosDeMateria().get(opCurso - 1), matrizHorarios)&&opCurso!=-1) {
@@ -147,11 +153,14 @@ public class MainEstudiante {
                                 System.out.println("Cruce de Horarios con " +
                                         String.valueOf(estudiante.visualizador.getMateriasDisponibles().get(matrizHorarios[horaDelDiaOcupado][numeroDelDiaOcupado])));
                                 estudiante.visualizador.mostrarHorariosDeMateria(materiaAux);
-                                System.out.print("Seleccione un curso:(Presione -1 para salir.) ");
-                                opCurso = entrada.nextInt();
+
+                                //System.out.print("Seleccione un curso:(Presione -1 para salir.) ");
+                                //opCurso = entrada.nextInt();
+                                opCurso = -1;
                                 if(opCurso==-1){
                                     break;
                                 }
+
                             }
                             if(opCurso!=-1) {
                                 registrarMateria(estudiante.visualizador.getHorariosDeMateria().get(opCurso - 1), matrizHorarios, opMateria);
@@ -164,6 +173,7 @@ public class MainEstudiante {
                             exitoDeMatricula = 1;
                             break;
                         }
+                        exitoDeMatricula = 1;
                     } while (exitoDeMatricula == 0);
                     break;
                 case -1:
@@ -174,6 +184,7 @@ public class MainEstudiante {
                     System.out.println("La opcion ingresada es incorrecta");
                     break;
             }
+            exitoPrograma =1;
         }while (exitoPrograma==0);
     }
 }
