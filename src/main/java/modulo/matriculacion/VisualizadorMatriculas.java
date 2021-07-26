@@ -17,12 +17,7 @@ public class VisualizadorMatriculas {
         System.out.printf("%-20s","Materias");
         System.out.println();
         int indice=1;
-        System.out.println("Segunda Matricula");
-        for (Materia materia:estudiante.getCurriculum().obtenerMateriasReprobadas(estudiante)){
-            System.out.println(indice+"."+" "+materia.getNombre());
-            materiasDisponibles.add(materia);
-            indice++;
-        }
+        this.mostrarMateriasReprobadas(estudiante,indice);
         System.out.println("Materias Disponibles");
         for (Materia materia:
         estudiante.getCarrera().obtenerMateriasSinAprobar(estudiante)) {
@@ -33,7 +28,14 @@ public class VisualizadorMatriculas {
             indice++;
         }
     }
-
+    public void mostrarMateriasReprobadas(Estudiante estudiante, int indice){
+        System.out.println("Segunda Matricula");
+        for (Materia materia:estudiante.getCurriculum().obtenerMateriasReprobadas(estudiante)){
+            System.out.println(indice+"."+" "+materia.getNombre());
+            materiasDisponibles.add(materia);
+            indice++;
+        }
+    }
     public void mostrarHorariosDeMateria(Materia materia){
         this.horariosDeMateria=new ArrayList<Curso>();
         int indice=1;
