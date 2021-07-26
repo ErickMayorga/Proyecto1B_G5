@@ -20,7 +20,7 @@ public class HorarioTest {
 
     @Test
     public void given_horario_when_validarHorario_then_ok() {
-
+        horario=new Horario(4,horasDia);
         assertTrue(horario.validarHorario());
     }
     @Test
